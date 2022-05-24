@@ -1,0 +1,41 @@
+/*Fontes Conforta*/
+
+@font-face {
+    font-family: Comforta-Bold;
+    src: url(../source/Comfortaa-Bold.ttf);
+}
+
+/*Fontes Open Sans*/
+
+@font-face {
+    font-family: Open_Sans-Bold;
+    src: url(../source/OpenSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: Open_Sans-SemiBold;
+    src: url(../source/OpenSans-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Open_Sans-Light;
+    src: url(../source/OpenSans-Light.ttf);
+}
+
+
+/*cores*/
+
+:root{
+    --primary0: #483698;
+
+    --secondary0: #FFF;
+    --secondary1: #F9F9F9;
+    --secondary3: #B9B9B9;
+    --secondary4: #8A8A8A;
+    --secondary7: #282828;
+
+    --CTA-1: #FFE766;
+    --CTA0: #FBDE40;
+
+    --Danger: #DC3545; 
+}
