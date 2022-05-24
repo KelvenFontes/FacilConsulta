@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro Profissional</title>
+
+        <link rel="stylesheet" href="../css/main.css">
+        <link href="https://api-teste-front-end-fc.herokuapp.com/cidades">
+    </head>
+    <body>
+        <header>
+            <a href="../index.html">
+                <img src="../icon/chevron-left.svg" alt="">
+            </a>
+        </header>
+        <main>
+            <section>
+                <div>
+                    <h1>Sobre o Profissional</h1>
+                </div>
+
+                <div>
+                    <h2>Detalhe do atendimento</h2>
+                </div>
+            </section>
+
+            <div class="form">
+                <form method="GET">
+                    <label for="Estado" class="labelSelect" id="labelEstado">Especialidade principal*</label>
+                    <select class="selecionar" id="estado">
+                        <option selected>Selecione</option>
+                    </select>
+
+                    <label for="CPF">Informe o preço da consulta*</label>
+                    <input type="number" id="CPF" placeholder="Valor">
+
+                    <label>Formas de pagamento da consulta*</label>
+                    <input type="radio">
+
+                </form>
+            </div>
+
+            <footer id="fim">
+                <div class="progress">
+                    <div class="progress-bar w-100" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <p id="textProgressBar">2 de 2</p>
+
+                <button id="proximaPagina" onclick="window.location.href='./html/pagina-2.html'">Próximo</button>
+            </footer>
+
+            <aside id="imagem">
+                <img src="../Images/desktop-pagina-2.png" alt="" id="imgLateral">
+            </aside>
+
+        </main>
+
+        <script>href="https://api-teste-front-end-fc.herokuapp.com/estados"</script>
+    </body>
+</html>

@@ -1,7 +1,7 @@
 body{
     background-color: var(--CTA-1);
     width: 80%;
-    margin: 10%;
+    margin: 8% 10% 8% 10%
 }
 
 main{
@@ -62,13 +62,17 @@ input{
 #labelCidade{
     position: relative;
     bottom: 45px;
-    left: 15px;
+    left: 62px;
     margin-bottom: -15px;
+}
+
+#estado{
+    margin-right: -38px;
 }
 
 #Cidade{
     position: relative;
-    right: 50px;
+    right: 10px;
 }
 
 .selecionar{
