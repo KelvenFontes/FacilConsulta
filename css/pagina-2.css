@@ -1,0 +1,127 @@
+body{
+  background-color: var(--CTA-1);
+  width: 80%;
+  margin-bottom: 16%;
+}
+
+main{
+  height: auto;
+  margin-bottom: 8%;
+}
+
+#iconVoltar{
+    position: absolute;
+    left: 11%;
+    top: 6%;
+    height: 21px;
+}
+
+#especialidade{
+    display: block;
+    width: 85%;
+    padding-left: 20px;
+}
+
+#tipoDeMoeda{
+    font-family: Open_Sans-SemiBold;
+    background-color: var(--primary0);
+    color: var(--secondary0);
+    width: 40px;
+    position: relative;
+    top: 5px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    border-top: solid 1px var(--primary0);
+}
+#Valor{
+    float: inline-end;
+    margin: -40px 0 30px 40px;
+    border-radius: 0 5px 5px 0;
+    padding-left: 10px;
+    width: 53%;
+}
+/*verificar*/
+#Valor:focus{
+    border-radius:0;
+    border: solid 1px var(--primary0);
+}
+
+/*Forma de Pagamento*/
+.group-radio {
+  display: block;
+  padding: 10px;
+  position: relative;
+  margin: 0 0 0 -10px;
+  width: 89%;
+}
+
+.group-radio input[type='radio'] {
+  visibility: hidden;
+}
+
+.selctorRadio{
+  background-color: var(--secondary1);
+  border-radius: 10px;
+  padding-left: 45px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 3px 1px var(--secondary3);
+}
+
+.group-radio input[type='radio']:checked + label::before{
+  content: url(../icon/checkbox-free-icon-font.svg);
+}
+
+.group-radio label,  .group-radio label::before{
+  font-family: Open_Sans-Bold;
+  cursor: pointer;
+  display: inline-block;
+  margin: -20px 40px 10px 0;
+  vertical-align: middle;
+}
+
+.group-radio label::before {
+  border-radius: 5px;
+  background-color: var(--secondary0);
+  border: 1px solid var(--secondary3);
+  content: '';
+  height: 20px;
+  width: 20px;
+  margin-top: 5px;
+}
+
+#li {
+  list-style: none;
+}
+
+#li label{
+  margin-top: -5px;
+}
+
+#Cartao{
+  margin-top: -10px;
+}
+
+#li input + ul > li{
+  display:none;
+  margin-top: -30px;
+}
+
+#li input:checked + ul{
+  height:auto;
+  margin: -23px 0 0 -51px;
+  padding: 0 0 0 77px;
+}
+
+#li input:checked + ul > li{
+  display:block;
+}
+
+#fim{
+  margin-top: -25px;
+  padding-bottom: 50px;
+}
+
+#imagem{
+  margin-top: -11%;
+}

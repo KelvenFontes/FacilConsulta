@@ -7,18 +7,17 @@
         <title>Cadastro Profissional</title>
 
         <link rel="stylesheet" href="../css/main.css">
-        <link href="https://api-teste-front-end-fc.herokuapp.com/cidades">
     </head>
     <body>
         <header>
             <a href="../index.html">
-                <img src="../icon/chevron-left.svg" alt="">
+                <img src="../icon/angle-left-free-icon-font (1).svg" alt="voltar" id="iconVoltar">
             </a>
         </header>
         <main>
             <section>
                 <div>
-                    <h1>Sobre o Profissional</h1>
+                    <h1>Sobre o atendimento</h1>
                 </div>
 
                 <div>
@@ -27,18 +26,57 @@
             </section>
 
             <div class="form">
-                <form method="GET">
-                    <label for="Estado" class="labelSelect" id="labelEstado">Especialidade principal*</label>
-                    <select class="selecionar" id="estado">
-                        <option selected>Selecione</option>
+                <form method="GET" id="teste">
+                    <label for="Especialidade" class="labelSelect">Especialidade principal*</label>
+                    <select class="selecionar" id="especialidade">
+                        <option value="">Selecione a especialidade</option>
                     </select>
 
-                    <label for="CPF">Informe o preço da consulta*</label>
-                    <input type="number" id="CPF" placeholder="Valor">
+                    <label for="Valor">Informe o preço da consulta*</label>
+                    <div id="tipoDeMoeda">R$</div>
+                    <input type="text" id="Valor" placeholder="Valor" onkeyup="formatarMoeda()">
 
-                    <label>Formas de pagamento da consulta*</label>
-                    <input type="radio">
+                    <p>Formas de pagamento da consulta*</p>
+                    <div class="group-radio">
+                        <div class="selctorRadio">
+                            <input type="radio" id="Pix" name="Pagamento" value="1">
+                            <label for="Pix">Pix</label>
+                        </div>
 
+                        <div class="selctorRadio">
+                            <input type="radio" id="dinheiro" name="Pagamento" value="2">
+                            <label for="dinheiro">Em dinheiro</label>
+                        </div>
+
+                        <ul class="selctorRadio">
+                            <li id="li">
+                                <label for="Cartao">Cartão de crédito</label>
+                                <input type="radio" id="Cartao" name="Pagamento" value="3"> 
+                                
+                                <ul class="group-radio-Parcela" id="CartaoSelect">
+                                    <li class="selctorParcela">
+                                        <input type="radio" id="1x" name="Parcela">
+                                        <label for="1x">1x, sem juros</label>
+                                    </li>
+                                    
+                                    <li class="selctorParcela">
+                                        <input type="radio" id="2x" name="Parcela">
+                                        <label for="2x">2x, sem juros</label>
+                                    </li>
+            
+                                    <li class="selctorParcela">
+                                        <input type="radio" id="3x" name="Parcela">
+                                        <label for="3x">3x, sem juros</label>
+                                    </li>
+                                    
+                                </ul>
+                            </li>
+                        </ul>
+
+                        
+                        
+                    </div>
+                    
                 </form>
             </div>
 
@@ -49,7 +87,7 @@
 
                 <p id="textProgressBar">2 de 2</p>
 
-                <button id="proximaPagina" onclick="window.location.href='./html/pagina-2.html'">Próximo</button>
+                <button id="proximaPagina" onclick="window.location.href='./pagina-3.html'">Próximo</button>
             </footer>
 
             <aside id="imagem">
@@ -58,6 +96,41 @@
 
         </main>
 
-        <script>href="https://api-teste-front-end-fc.herokuapp.com/estados"</script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script>
+        
+            
+            var especialidades;
+            var especialidade = document.querySelector('#especialidade');
+
+            fetch('https://api-teste-front-end-fc.herokuapp.com/especialidades')
+            .then((response) => response.json())
+            .then((especialidades) => {
+                for(let i=0;i<especialidades.length; i++){
+                    //console.log(especialidades[i].id);
+                    //console.log(especialidades[i].nome);
+                    especialidade.options[especialidade.options.length] = new Option(especialidades[i].nome, especialidades[i].id);
+                }
+            })
+
+            //parcela
+
+                var checked = $("input[name='Pagamento']:checked").value;
+                var selecionado = document.querySelector('#CartaoSelect')
+
+
+            function selecionado(){
+                for( let i=null; i<checked;i++){
+                    if(checked != 3){
+                        CartaoSelect.style.visibility = "hidden";
+                    }else {
+                        CartaoSelect.style.visibility = "visible";
+                    }
+                }
+            }
+
+            
+        </script>
+
     </body>
 </html>

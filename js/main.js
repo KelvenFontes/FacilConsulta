@@ -1,9 +1,8 @@
-var estados;
-var cidades;
-var estado = document.querySelector('#estado');
-var cidade = document.querySelector('#cidade');
-
 /*Entrando os dados do estado*/
+
+var estados;
+var estado = document.querySelector('#estado');
+
 fetch('https://api-teste-front-end-fc.herokuapp.com/estados')
 .then((response) => response.json())
 .then((estados) => {
@@ -15,7 +14,11 @@ fetch('https://api-teste-front-end-fc.herokuapp.com/estados')
     } 
 })
 
-/*Entrando os dados do estado*/
+/*Entrando os dados da cidade*/
+
+var cidades;
+var cidade = document.querySelector('#cidade');
+
 fetch('https://api-teste-front-end-fc.herokuapp.com/cidades')
 .then((response) => response.json())
 .then((cidades) => {
