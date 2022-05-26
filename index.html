@@ -26,10 +26,10 @@
                     <input type="text" id="name" placeholder="Digite o nome completo" minlength="3" maxlength="48" required>
 
                     <label for="CPF">CPF*</label>
-                    <input type="text" id="CPF" placeholder="Digite um CPF" autocomplete="off" maxlength="14" onkeyup="mascara_cpf()" required>
+                    <input type="text" id="CPF" placeholder="Digite um CPF" maxlength="14" onkeyup="mascara_cpf()" required>
 
                     <label for="numberCel">Número de Celular*</label>
-                    <input type="text" id="numberCel" placeholder="(00) 0 0000-0000" autocomplete="off" maxlength="15" required>
+                    <input type="text" id="numberCel" placeholder="(00) 0 0000-0000" maxlength="15" required>
 
                     <!---->
                     <label for="Estado" class="labelSelect" id="labelEstado">Estado*</label>
@@ -62,7 +62,7 @@
         </main>
 
         <script src="./js/main.js"></script>
-
+        <script src="./js/verifica.js"></script>
         <script src="./js/mascara.js"></script>
     </body>
 </html>

@@ -10,7 +10,7 @@
     </head>
     <body>
         <header>
-            <a href="../index.html">
+            <a onclick="goBack()">
                 <img src="../icon/angle-left-free-icon-font (1).svg" alt="voltar" id="iconVoltar">
             </a>
         </header>
@@ -26,7 +26,7 @@
             </section>
 
             <div class="form">
-                <form method="GET" id="teste">
+                <form method="GET">
                     <label for="Especialidade" class="labelSelect">Especialidade principal*</label>
                     <select class="selecionar" id="especialidade">
                         <option value="">Selecione a especialidade</option>
@@ -72,9 +72,6 @@
                                 </ul>
                             </li>
                         </ul>
-
-                        
-                        
                     </div>
                     
                 </form>
@@ -96,40 +93,13 @@
 
         </main>
 
-        <script type="text/javascript" src="js/jquery.js"></script>
+        <script src="../js/mascara.js"></script>
+        <script src="../js/main.js"></script>
+
         <script>
-        
-            
-            var especialidades;
-            var especialidade = document.querySelector('#especialidade');
-
-            fetch('https://api-teste-front-end-fc.herokuapp.com/especialidades')
-            .then((response) => response.json())
-            .then((especialidades) => {
-                for(let i=0;i<especialidades.length; i++){
-                    //console.log(especialidades[i].id);
-                    //console.log(especialidades[i].nome);
-                    especialidade.options[especialidade.options.length] = new Option(especialidades[i].nome, especialidades[i].id);
-                }
-            })
-
-            //parcela
-
-                var checked = $("input[name='Pagamento']:checked").value;
-                var selecionado = document.querySelector('#CartaoSelect')
-
-
-            function selecionado(){
-                for( let i=null; i<checked;i++){
-                    if(checked != 3){
-                        CartaoSelect.style.visibility = "hidden";
-                    }else {
-                        CartaoSelect.style.visibility = "visible";
-                    }
-                }
+            function goBack() {
+                window.history.back()
             }
-
-            
         </script>
 
     </body>

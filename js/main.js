@@ -29,3 +29,48 @@ fetch('https://api-teste-front-end-fc.herokuapp.com/cidades')
         cidade.options[cidade.options.length] = new Option(cidades[i].nome, cidades[i].id);
     }
 })
+
+/*Entrando os dados dos especialistas*/
+
+var especialidades;
+var especialidade = document.querySelector('#especialidade');
+
+fetch('https://api-teste-front-end-fc.herokuapp.com/especialidades')
+.then((response) => response.json())
+.then((especialidades) => {
+    for(let i=0;i<especialidades.length; i++){
+        //console.log(especialidades[i].id);
+        //console.log(especialidades[i].nome);
+        especialidade.options[especialidade.options.length] = new Option(especialidades[i].nome, especialidades[i].id);
+    }
+})
+
+/*Entrando com dados da API dos funcionarios cadastrados*/
+var perfils;
+//var especialidade = document.querySelector('#especialidade');
+
+fetch('https://api-teste-front-end-fc.herokuapp.com/profissionais')
+.then((response) => response.json())
+.then((perfils) => {
+    for(let i=0;i<perfils.length; i++){
+        console.log(perfils[i].id);
+        console.log(perfils[i].nome);
+        console.log(perfils[i].cpf);
+        console.log(perfils[i].cidadeId);
+        console.log(perfils[i].especialidadeId);
+        //especialidade.options[especialidade.options.length] = new Option(especialidades[i].nome, especialidades[i].id);
+    }
+})
+
+/*Armazena dados lado cliente */                                                                                                                          
+var ESTADO = document.getElementById("estado");
+
+
+window.localStorage.setItem('nome', document.getElementById('name').value);
+window.localStorage.setItem('numero', document.querySelector('#numberCel'));
+window.localStorage.setItem('CPF', document.querySelector('#CPF'));
+window.localStorage.setItem('estado', ESTADO);
+
+document.cookie=`username = ${name1.value}`;
+
+

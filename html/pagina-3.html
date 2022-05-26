@@ -1,12 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro Profissional</title>
+
+        <link rel="stylesheet" href="../css/main.css">
+    </head>
+    <body>
+        <header>
+            <a onclick="goBack()">
+                <img src="../icon/angle-left-free-icon-font (1).svg" alt="voltar" id="iconVoltar">
+            </a>
+        </header>
+        <main>
+            <section>
+                <div>
+                    <h1>Revisão do cadastro</h1>
+                </div>
+
+                <p>Nome Completo</p>
+                <p id="name2"></p>
+
+                <p>CPF</p>
+                <p></p>
+
+                <p>Número de celular ou telefone</p>
+                <p></p>
+
+                <p>Estado/Ciade</p>
+                <p></p>
+
+                <p>Especialidade principal</p>
+                <p></p>
+
+                <p>Preço da consulta</p>
+                <p></p>
+
+                <p>Formas de pagamento da consulta</p>
+                <p></p>
+
+            </section>
+
+            
+
+            <footer id="fim">
+                <button id="proximaPagina" onclick="window.location.href='./pagina-4.html'">Cadastrar profissional</button>
+                <button id="voltar" onclick="goBack()">Editar cadastro</button>
+            </footer>
+
+            <aside id="imagem">
+                <img src="../Images/desktop-pagina-3.png" alt="" id="imgLateral">
+            </aside>
+
+        </main>
+
+        <script src="../js/mascara.js"></script>
+        <script src="../js/main.js"></script>
+
+        <script>
+            function goBack() {
+                window.history.back()
+            }
+
+            document.getElementById('name2') = textContent = localStorage.getItem('nome');
+            
+        </script>
+
+    </body>
 </html>
